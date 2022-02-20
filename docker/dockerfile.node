@@ -1,0 +1,6 @@
+FROM node
+WORKDIR /app
+
+RUN apt-get -y update && apt-get -y install jq && apt-get clean
+
+ENTRYPOINT ["sh", "run.sh"]
